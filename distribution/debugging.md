@@ -17,7 +17,7 @@ it's recommended to add a custom stage to the end of the `api/Dockerfile`.
 # api/Dockerfile
 FROM api_platform_php as api_platform_php_dev
 
-ARG XDEBUG_VERSION=3.0.2
+ARG XDEBUG_VERSION=3.1.2
 RUN set -eux; \
  apk add --no-cache --virtual .build-deps $PHPIZE_DEPS; \
  pecl install xdebug-$XDEBUG_VERSION; \
